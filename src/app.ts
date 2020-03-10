@@ -18,7 +18,7 @@ dotenv.config({ path: ".env" });
 // Connect to MongoDB
 const mongoUrl = MONGODB_URI;
 (<any>mongoose).Promise = bluebird;
-mongoose.connect(mongoUrl, { useNewUrlParser: true }).then(
+mongoose.connect(mongoUrl, { useNewUrlParser: true,  useUnifiedTopology: true }).then(
     () => { /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ },
 ).catch(err => {
     console.log("MongoDB connection error. Please make sure MongoDB is running. " + err);
