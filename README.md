@@ -1,1 +1,3 @@
-Boilerplate node.js
+Express
+Typescript
+Mongo
